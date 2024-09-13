@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI TASK 1</title>
+    <!-- fonts link start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fonts link end -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="bs-header">
+        <div class="logo-wrap">
+          <a href="index.html">
+            <img src="assets/images/logo.webp" alt="logo" />
+          </a>
+        </div>
+        <button class="hamburger-menu">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
+        <ul class="nav-list">
+          <li class="item">
+            Menu 1 <span class="dropdown-arrow arrow-down"></span>
+          </li>
+          <li class="item">Menu 2</li>
+          <li class="item">Menu 3</li>
+          <li class="item">Menu 4</li>
+        </ul>
+      </header>
+      <section class="bs-banner cm-sec">
+        <img src="assets/images/banner.webp" alt="banner" />
+      </section>
+      <section class="cm-sec sec-1">
+        <div class="cm-container">
+          <h3 class="sec-title">
+            Lorem Ipsum is simply dummy text of the printing
+          </h3>
+          <ul class="bs-info-list">
+            <li class="item">
+              <img
+                src="assets/images/icon-internet_rate_traffic.png"
+                alt="icon"
+              />
+            </li>
+            <li class="item">
+              <img src="assets/images/icon-colorfull.png" alt="icon" />
+            </li>
+            <li class="item">
+              <img src="assets/images/icon-media.png" alt="icon" />
+            </li>
+            <li class="item">
+              <img src="assets/images/icon-interface.png" alt="icon" />
+            </li>
+            <li class="item">
+              <img src="assets/images/icon-graph.png" alt="icon" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="cm-sec sec-2">
+        <div class="cm-container">
+          <h3 class="sec-title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          </h3>
+          <div class="bs-img-info">
+            <div class="img-wrap">
+              <img src="assets/images/coffee-beans.png" alt="coffee-beans" />
+            </div>
+            <div class="info-wrap">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec
+                turpis in arcu molestie posuere. Fusce neque nisi, volutpat non
+                pharetra id, vestibulum id augue. Praesent mattis elit ac nibh
+                rhoncus, vel finibus elit scelerisque.
+              </p>
+            </div>
+          </div>
+
+          <div class="bs-img-info typ-reverse">
+            <div class="img-wrap">
+              <img
+                src="assets/images/coffee-product.png"
+                alt="coffee-product"
+              />
+            </div>
+            <div class="info-wrap">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec
+                turpis in arcu molestie posuere. Fusce neque nisi, volutpat non
+                pharetra id, vestibulum id augue. Praesent mattis elit ac nibh
+                rhoncus, vel finibus elit scelerisque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cm-sec sec-3">
+        <div class="cm-container">
+          <div class="bs-tabs">
+            <ul class="tab-list">
+              <li class="item active" data-tab="tab-1">Tab 1</li>
+              <li class="item" data-tab="tab-2">Tab 2</li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-cont" id="tab-1">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  nec turpis in arcu molestie posuere. Fusce neque nisi,
+                  volutpat non pharetra id, vestibulum id augue. Praesent mattis
+                  elit ac nibh rhoncus, vel finibus elit scelerisque.
+                </p>
+              </div>
+              <div class="tab-cont" id="tab-2">
+                <p>
+                  Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  nec turpis in arcu molestie posuere. Fusce neque nisi,
+                  volutpat non pharetra id, vestibulum id augue. Praesent mattis
+                  elit ac nibh rhoncus, vel finibus elit scelerisque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bs-ftr">
+      <div class="cm-container">
+        <button class="cm-btn">Subscribe</button>
+
+        <ul class="ftr-nav">
+          <li class="item">
+            <a href="javascript:void(0);">Privacy Policy</a>
+          </li>
+          <li class="item">
+            <a href="javascript:void(0);">Terms of Use</a>
+          </li>
+          <li class="item">
+            <a href="javascript:void(0);">All Rights Reserved</a>
+          </li>
+        </ul>
+        <div class="ftr-logo-wrap">
+          <a href="index.html">
+            <img src="assets/images/logo.webp" alt="footer-logo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // tabs functionality start
+        $(".tab-cont").hide();
+        $("#tab-1").show();
+        $(".tab-list li").on("click", function () {
+          var tabId = $(this).data("tab");
+          $(".tab-cont").hide();
+          $(".tab-list li").removeClass("active");
+          $(this).addClass("active");
+          $("#" + tabId).fadeIn(400);
+        });
+        // tab functionality end
+
+        // mobile menu function start
+        $(".hamburger-menu").on("click", function () {
+          $(".nav-list").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
