@@ -1,0 +1,50 @@
+.bs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  padding: 2rem 4rem;
+  position: relative;
+
+  @include mq-below($xs) {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  .logo-wrap {
+    max-width: 27.5rem;
+    @include mq-below($xs) {
+      max-width: 15rem;
+      align-self: flex-start;
+    }
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    @include mq-below($xs) {
+      display: none;
+      position: absolute;
+      top: 5.4rem;
+      left: 0;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 2rem 2rem 2rem;
+      background: black;
+      border-top: 1px solid #dddddd;
+    }
+    .item {
+      font-size: 1.6rem;
+      font-weight: $font-bold;
+      line-height: normal;
+      color: var(--white);
+      cursor: pointer;
+      position: relative;
+      @include mq-below($xs) {
+        padding: 1.2rem 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.bs-tabs {
+  .tab-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .item {
+      max-width: 30rem;
+      width: 100%;
+      font-size: 3.5rem;
+      line-height: 95px;
+      font-weight: $font-regular;
+      color: var(--black);
+      background-color: var(--grey);
+      text-align: center;
+      cursor: pointer;
+      &.active {
+        background-color: var(--red);
+        color: var(--white);
+        &:hover {
+          color: var(--white);
+        }
+      }
+      &:hover {
+        color: var(--red);
+      }
+      @include mq-below($xs) {
+        max-width: 10rem;
+        font-size: 1.8rem;
+        line-height: 40px;
+      }
+    }
+  }
+  .tab-content {
+    box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.38);
+    padding: 7rem;
+    @include mq-below($xs) {
+      padding: 2rem;
+    }
+
+    .tab-cont {
+      p {
+        font-size: 4rem;
+        line-height: 80px;
+        font-weight: $font-regular;
+        @include mq-below($xs) {
+          font-size: 2rem;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}

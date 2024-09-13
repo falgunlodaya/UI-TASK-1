@@ -1,0 +1,15 @@
+.bs-info-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq-below($xs) {
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .item {
+    @include mq-below($xs) {
+      max-width: 11rem;
+    }
+  }
+}

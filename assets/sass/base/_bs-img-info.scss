@@ -1,0 +1,38 @@
+.bs-img-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq-below($xs) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .img-wrap {
+    width: 40%;
+    @include mq-below($xs) {
+      width: 70%;
+    }
+  }
+  .info-wrap {
+    width: 50%;
+    @include mq-below($xs) {
+      width: 100%;
+    }
+    p {
+      font-size: 3rem;
+      line-height: 68px;
+      font-weight: $font-regular;
+      @include mq-below($xs) {
+        font-size: 2.2rem;
+        line-height: 40px;
+      }
+    }
+  }
+  &.typ-reverse {
+    flex-direction: row-reverse;
+    margin-top: 15.4rem;
+    @include mq-below($xs) {
+      flex-direction: column;
+    }
+  }
+}
